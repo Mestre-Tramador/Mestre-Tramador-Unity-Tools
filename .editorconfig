@@ -1,0 +1,23 @@
+# EditorConfig is awesome: https://EditorConfig.org
+#
+# Root file
+root = true
+
+# General configuration for the code files
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = crlf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# JSON, XML and alike, and other work
+# better with less spacing
+[*.{json,xml,csproj,sln,todo}]
+indent_size = 2
+
+# Markdown files have some specific
+# rules for whitespace and newlines
+[*.md]
+trim_trailing_whitespace = false

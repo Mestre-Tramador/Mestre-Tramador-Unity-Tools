@@ -1,0 +1,33 @@
+Runtime:
+  Main:
+    ✔ Create C# Project @done (28/03/2022 20:31)
+    ✔ Create Extension of MonoBehaviour @done (28/03/2022 20:35)
+    ✔ Create Character (2D) Class @done (28/03/2022 22:50)
+    ✔ Create Player (2D) Class @done (28/03/2022 22:51)
+    ✘ Create Event Array @cancelled (05/04/2022 20:47)
+    ✘ Create Event Listener @cancelled (06/04/2022 00:22)
+    ✔ Create Event Trait @done (12/04/2022 23:39)
+    ✔ Add Generic Types to Event Trait @done (13/04/2022 21:15)
+    ✔ Implement Event Trait Usage @done (19/04/2022 23:58)
+    ✔ Create Interface to group Event Traits @done (20/04/2022 02:11)
+    ✔ Document current Code @done (21/04/2022 00:35)
+  ...
+...
+
+Editor:
+  Main:
+    ✔ Create C# Project @done (28/03/2022 20:31)
+    ☐ Create first Player (2D) Editor
+    ☐ Add Collider Change to Player (2D) Editor
+    ☐ Add Settings (Force, Impulse, Speed, JumpMode) to Player (2D) Editor
+  ...
+...
+
+Other:
+  ✔ Complete Markdown files @done (21/04/2022 00:57:44)
+  ☐ Create GitHub Issue Template
+  ☐ Create GitHub Issue Labels
+  ☐ Create GitHub PR Template
+  ☐ Create a GitHub Wiki
+  ☐ Study the conversion to a Unity Package
+...

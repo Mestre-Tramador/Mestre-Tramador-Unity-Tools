@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xml>
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <TargetType>library</TargetType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Version>0.1.0.1</Version>
+    <AssemblyVersion>0.1.0.1</AssemblyVersion>
+    <FileVersion>0.1.0.1</FileVersion>
+    <Authors>Mestre-Tramador</Authors>
+    <TargetName>MestreTramador</TargetName>
+    <AssemblyName>MestreTramador</AssemblyName>
+    <PackageId>MestreTramador</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Description>
+      Mestre Tramador Unity Tools are a series of script libraries to improve game development on Unity Engine.
+      It serves as a kind of framework and is intended to facilitate and agilizate coding.
+      The Main library contains the main features of the Runtime, and is necessary to all other separated libraries.
+    </Description>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputPath>..\..\..\dist\</OutputPath>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\libs\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+    </Reference>
+
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\libs\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+    </Reference>
+
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\libs\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+    </Reference>
+
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\..\libs\UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+    </Reference>
+
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\..\libs\UnityEngine.SubsystemsModule.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+    </Reference>
+
+    <Reference Include="System">
+      <HintPath>..\..\..\libs\System.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+    </Reference>
+  </ItemGroup>
+</Project>

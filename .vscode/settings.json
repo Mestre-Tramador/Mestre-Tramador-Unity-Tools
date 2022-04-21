@@ -1,0 +1,25 @@
+{
+  // These are my settings for the Workspace.
+  "explorer.compactFolders": false,
+  "files.exclude": {
+    "[Ll]ibs/": true,
+    "[Pp]lugins/": true
+  },
+  "markdownlint.config": {
+    "MD042": false,
+    "no-inline-html": {
+      "allowed_elements": [
+        "img",
+        "p"
+      ]
+    }
+  },
+  "cSpell.words": [
+    "behaviour",
+    "Behaviour",
+    "cref",
+    "dotnet"
+  ]
+
+  // Insert here the Settings for C# stuff.
+}
