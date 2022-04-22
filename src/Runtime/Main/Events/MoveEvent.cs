@@ -23,6 +23,7 @@ namespace MestreTramador
     /// </summary>
     sealed public partial class MoveEvent : Event
     {
+        #nullable enable
         #pragma warning disable CS8604
         /// <summary>
         ///     On the occurrence of the Move Event,
@@ -42,5 +43,6 @@ namespace MestreTramador
             }
         }
         #pragma warning restore CS8604
+        #nullable disable
     }
 }

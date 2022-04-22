@@ -30,10 +30,10 @@ namespace MestreTramador
         ///     The Collider defines the shape, or hitbox if you will, of the Character.
         /// </summary>
         /// <value>
-        ///     It can also be an reference to a extended class,
-        ///     like <see cref="BoxCollider2D" /> or <see cref="CircleCollider2D" />.
+        ///     Its a proper Component with a <see cref="Character2DCollider.Type" /> to
+        ///     determine the shape.
         /// </value>
-        Collider2D Collider { get; }
+        Character2DCollider Collider { get; }
 
         /// <summary>
         ///     The Body creates the physics of the Character and is necessary to create
@@ -48,11 +48,21 @@ namespace MestreTramador
 
         #region Movement
         /// <summary>
+        ///     Recommended minimum value of <see cref="Speed" />.
+        /// </summary>
+        public const float MIN_SPEED = 2.0f;
+
+        /// <summary>
+        ///     Recommended maximum value of <see cref="Speed" />.
+        /// </summary>
+        public const float MAX_SPEED = 5.0f;
+
+        /// <summary>
         ///     Determines the speed of the Character's movement.
         /// </summary>
         /// <value>
-        ///     Generally it stays on a scale of <see langword="250.0f" />
-        ///     to <see langword="400.0f" />.
+        ///     Generally it stays on a scale of <see langword="2.0f" />
+        ///     to <see langword="5.0f" />.
         /// </value>
         float Speed { get; }
 
@@ -73,11 +83,21 @@ namespace MestreTramador
 
         #region Jump
         /// <summary>
+        ///     Recommended minimum value of <see cref="Force" />.
+        /// </summary>
+        public const float MIN_FORCE = 250.0f;
+
+        /// <summary>
+        ///     Recommended maximum value of <see cref="Force" />.
+        /// </summary>
+        public const float MAX_FORCE = 400.0f;
+
+        /// <summary>
         ///     Determines the force of the Character's jump.
         /// </summary>
         /// <value>
         ///     Generally, as it represent force, it stays on a scale of
-        ///     <see langword="2.0f" /> to <see langword="5.0f" />.
+        ///     <see langword="250.0f" /> to <see langword="400.0f" />.
         /// </value>
         float Force { get; }
 

@@ -43,6 +43,7 @@ namespace MestreTramador
             }
         }
 
+        #nullable enable
         /// <inheritdoc cref="On{B}(B, Collision2D)" />
         /// <remarks>
         ///     The argument must be a <see cref="Collision2D" />.
@@ -59,6 +60,7 @@ namespace MestreTramador
 
             throw new InvalidOperationException("Not a Touch Event!");
         }
+        #nullable disable
         #pragma warning restore CS8604
     }
 }

@@ -26,16 +26,23 @@ namespace MestreTramador
     sealed public partial class TouchFloorEvent : TouchEvent
     {
         /// <summary>
-        ///     When the 2D Player touches the Floor, it <see cref="Character2D.Jumps" />
-        ///     are set to <see langword="0" />.
+        ///     When the 2D Player touches the Floor, its <see cref="Character2D.Jumps" />
+        ///     are set to <see langword="0" /> and reenabled if the <see cref="Character2D.JumpMode" /> permits.
         /// </summary>
         /// <param name="player">The instance of the Player.</param>
         /// <param name="collision">The Floor collided.</param>
         private void OnTouchFloorPlayer2D(Player2D player, Collision2D collision)
         {
-           // TODO: Verify if is a "floor".
+            // TODO: Verify if is a "floor".
 
-           player.Jumps = 0;
+            if(player.JumpMode != JumpModes.NoJump)
+            {
+               if(!player.CanJump)
+                {
+                    player.Jumps = 0;
+                    player.CanJump = true;
+                }
+            }
         }
     }
 }

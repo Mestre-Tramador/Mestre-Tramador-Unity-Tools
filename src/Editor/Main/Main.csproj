@@ -39,14 +39,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Runtime\Main\Main.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="UnityEditor">
+      <HintPath>..\..\..\libs\UnityEditor.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+    </Reference>
+
+    <Reference Include="UnityEditor.CoreModule">
+      <HintPath>..\..\..\libs\UnityEditor.CoreModule.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+    </Reference>
+
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\libs\UnityEngine.dll</HintPath>
       <Private>false</Private>
       <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
     </Reference>
 
-    <Reference Include="UnityEditor">
-      <HintPath>..\..\..\libs\UnityEditor.dll</HintPath>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\libs\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+    </Reference>
+
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\libs\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>false</Private>
       <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
     </Reference>

@@ -35,6 +35,7 @@ namespace MestreTramador
             Activator.CreateInstance<Ev>().On<B>(behaviour);
         }
 
+        #nullable enable
         /// <summary>
         ///     Activate and use the Event.
         /// </summary>
@@ -45,5 +46,6 @@ namespace MestreTramador
         {
             Activator.CreateInstance<Ev>().On<B>(behaviour, arg);
         }
+        #nullable disable
     }
 }

@@ -23,6 +23,7 @@ namespace MestreTramador
     /// </summary>
     sealed public partial class JumpEvent : Event
     {
+        #nullable enable
         #pragma warning disable CS8604
         /// <summary>
         ///     On the occurrence of the Jump Event,
@@ -42,5 +43,6 @@ namespace MestreTramador
             }
         }
         #pragma warning restore CS8604
+        #nullable disable
     }
 }

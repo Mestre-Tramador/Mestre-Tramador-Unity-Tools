@@ -19,24 +19,23 @@
 namespace MestreTramador
 {
     /// <summary>
-    ///     An Event is an action occurred on some Behaviour.
+    ///     Lists all shapes, or types, a <see cref="Character2DCollider" /> can assume.
     /// </summary>
-    public abstract class Event
+    public enum Character2DColliders
     {
-        /// <inheritdoc cref="On{B}(B, object?)" />
-        public void On<B>(B behaviour) where B : BaseMonoBehaviour
-        {
-            this.On<B>(behaviour, null);
-        }
-
-        #nullable enable
         /// <summary>
-        ///     On the occurrence of the Event...
+        ///     Represent a <see cref="UnityEngine.BoxCollider2D" />.
         /// </summary>
-        /// <param name="behaviour">The instance of the Behaviour.</param>
-        /// <param name="arg">Some additional data to the Event.</param>
-        /// <typeparam name="B">On any type of Behaviour can occur an Event.</typeparam>
-        public abstract void On<B>(B behaviour, object? arg = null) where B : BaseMonoBehaviour;
-        #nullable disable
+        Box = 0,
+
+        /// <summary>
+        ///     Represent a <see cref="UnityEngine.CircleCollider2D" />.
+        /// </summary>
+        Circle = 1,
+
+        /// <summary>
+        ///     Represent a <see cref="UnityEngine.CapsuleCollider2D" />.
+        /// </summary>
+        Capsule = 2
     }
 }

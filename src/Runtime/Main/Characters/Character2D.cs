@@ -27,16 +27,33 @@ namespace MestreTramador
     {
         #region Controls
         /// <inheritdoc />
-        public bool CanMove { get; protected set; }
+        public bool CanMove { get; set; }
 
         /// <inheritdoc />
-        public bool CanJump { get; protected set; }
+        public bool CanJump { get; set; }
         #endregion
 
         #region Body
         #pragma warning disable CS8618
         /// <inheritdoc />
-        public Collider2D Collider { get; private set; }
+        public Character2DCollider Collider
+        {
+            get
+            {
+                if(_collider == null)
+                {
+                    _collider = GetComponent<Character2DCollider>();
+                }
+
+                return _collider;
+            }
+            private set => _collider = value;
+        }
+
+        /// <summary>
+        ///     Holds the Component reference.
+        /// </summary>
+        private Character2DCollider _collider;
 
         /// <inheritdoc />
         public Rigidbody2D Body { get; private set; }
@@ -45,15 +62,15 @@ namespace MestreTramador
 
         #region Movement
         /// <inheritdoc />
-        public float Speed { get; protected set; }
+        public float Speed { get; set; }
 
         /// <inheritdoc />
-        public Directions2D IsTurnedTo { get => gameObject.transform.localScale.x > 0 ? Directions2D.Right : Directions2D.Left; }
+        public Directions2D IsTurnedTo { get => transform.localScale.x > 0 ? Directions2D.Right : Directions2D.Left; }
 
         /// <inheritdoc />
         public void Turn()
         {
-            gameObject.transform.localScale = gameObject.transform.localScale.InvertX();
+            transform.localScale = transform.localScale.InvertX();
 
             Body.velocity = Vector2.zero;
         }
@@ -61,10 +78,20 @@ namespace MestreTramador
 
         #region Jump
         /// <inheritdoc />
-        public float Force { get; protected set; }
+        public float Force { get; set; }
 
         /// <inheritdoc />
-        public JumpModes JumpMode { get; protected set; }
+        public JumpModes JumpMode
+        {
+            get => _jumpMode;
+            set => _jumpMode = value;
+        }
+
+        /// <summary>
+        ///     Serialize the Jump Mode.
+        /// </summary>
+        [SerializeField]
+        private JumpModes _jumpMode;
 
         /// <inheritdoc />
         public int Jumps
@@ -81,9 +108,12 @@ namespace MestreTramador
 
                 _jumps = value;
 
-                CanJump = _jumps < ((int) JumpMode);
+                bool canNextJump = _jumps < (int) JumpMode;
 
-                Jumps = 0;
+                if(!canNextJump && JumpMode != JumpModes.NoJump)
+                {
+                    CanJump = false;
+                }
             }
         }
 
@@ -95,36 +125,38 @@ namespace MestreTramador
 
         #region Behaviour
         /// <summary>
-        ///  On Awake, all properties are defined to default values.
+        ///      On Awake, all properties are defined to default values.
         /// </summary>
         protected override void OnAwake()
         {
-            Body     = gameObject.GetComponent<Rigidbody2D>();
-            Collider = gameObject.GetComponent<BoxCollider2D>();
+            Body = GetComponent<Rigidbody2D>();
+
+            Collider = GetComponent<Character2DCollider>();
+
+            CanMove = true;
+            CanJump = true;
 
             Force = 0.0f;
             Speed = 0.0f;
 
             Jumps = 0;
-
-            JumpMode = JumpModes.NoJump;
-
-            CanMove = true;
-            CanJump = true;
         }
 
         /// <summary>
-        ///     On Reset, a <see cref="Rigidbody2D" /> and a <see cref="BoxCollider2D" />
+        ///     On Reset, a <see cref="Rigidbody2D" /> and a <see cref="Character2DCollider" />
         ///     components are added by default (if not already present), and the basic constraints
         ///     are also set.
         /// </summary>
         protected override void OnReset()
         {
-            Rigidbody2D body = gameObject.AddComponentIfNotExist<Rigidbody2D>();
+            Body = gameObject.AddComponentIfNotExist<Rigidbody2D>();
 
-            gameObject.AddComponentIfNotExist<BoxCollider2D>();
+            Body.constraints = RigidbodyConstraints2D.FreezeRotation;
+            Body.hideFlags = HideFlags.HideInInspector;
 
-            body.constraints = RigidbodyConstraints2D.FreezeRotation;
+            Collider = gameObject.AddComponentIfNotExist<Character2DCollider>();
+
+            JumpMode = JumpModes.NoJump;
         }
         #endregion
     }

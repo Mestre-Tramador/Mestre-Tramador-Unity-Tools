@@ -38,7 +38,7 @@ namespace MestreTramador
                 return;
             }
 
-            if(Input.GetKeyDown(KeyCode.Space) && player.Jumps <= 1)
+            if(Input.GetKeyDown(KeyCode.Space))
             {
                 player.Body.AddForce(Vector2.up * player.Force);
 

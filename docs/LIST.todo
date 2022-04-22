@@ -11,20 +11,27 @@ Runtime:
     ✔ Implement Event Trait Usage @done (19/04/2022 23:58)
     ✔ Create Interface to group Event Traits @done (20/04/2022 02:11)
     ✔ Document current Code @done (21/04/2022 00:35)
+    ✔ Document Editions @done (22/04/2022 00:51)
+    ☐ Create Animations Controls for Character (2D) Class
+    ☐ Integrate Animations Controls with Event Traits
+    ☐ Create Animations Events
   ...
 ...
 
 Editor:
   Main:
     ✔ Create C# Project @done (28/03/2022 20:31)
-    ☐ Create first Player (2D) Editor
-    ☐ Add Collider Change to Player (2D) Editor
-    ☐ Add Settings (Force, Impulse, Speed, JumpMode) to Player (2D) Editor
+    ✔ Create first Player (2D) Editor @done (21/04/2022 20:40)
+    ✔ Add Collider Change to Player (2D) Editor @done (21/04/2022 22:13)
+    ✔ Add Settings (Force, Impulse, Speed, JumpMode) to Player (2D) Editor @done (21/04/2022 23:57)
+    ✔ Document current Code @done (22/04/2022 11:13)
+    ☐ Add Animations on Player (2D) Editor
   ...
 ...
 
 Other:
-  ✔ Complete Markdown files @done (21/04/2022 00:57:44)
+  ✔ Complete Markdown files @done (21/04/2022 00:57)
+  ✔ Fix ChangeLog file @done (22/04/2022 00:54)
   ☐ Create GitHub Issue Template
   ☐ Create GitHub Issue Labels
   ☐ Create GitHub PR Template

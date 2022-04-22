@@ -26,6 +26,7 @@ namespace MestreTramador
     /// </summary>
     public static class TangibleVectors
     {
+        #nullable enable
         /// <summary>
         ///     Tange from a existing <c>Vector</c> to create a new one
         ///     with the given values and reusing the others that weren't given.
@@ -43,6 +44,7 @@ namespace MestreTramador
                 z == null ? vector.x : (float) z
             );
         }
+        #nullable disable
 
         /// <summary>
         ///     Invert the X of a <c>Vector</c>.

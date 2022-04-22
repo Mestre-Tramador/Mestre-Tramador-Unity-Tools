@@ -9,20 +9,55 @@ Also, this projects follows the [Microsoft Assembly Versioning](https://docs.mic
 
 ## [Unreleased]
 
-- Player 2D Editor;
+- Player 2D Animations controls;
 - For more info, check the todo list [here](./LIST.todo).
+
+## [0.1.0.2] - 2022-04-22
+
+### Created
+
+- Character Collider (2D) Class
+- Editor with Serialization Class
+- Player (2D) Custom Editor Class
+
+### Added
+
+- C# "Editor Main" Project to Solution
+- Character (2D) Speed and Force Minimum and Maximum Constants
+- Pragma Tags for Nullables
+
+### Fixed
+
+- Touch Floor Event not correctly resetting Jump Control
+- Changelog File Format
+
+### Other
+
+- Documented Code
+- Markdown Rules Edited
 
 ## [0.1.0.1] - 2022-04-21
 
+### Created
+
+- .NET Solution
+- C# "Runtime" Project
+- C# "Editor" Project
+- Extension of MonoBehaviour
+- Character (2D) Class
+- Player (2D) Class
+- Event Trait
+- Interface to group Event Traits
+
+### Added
+
+- Generic Types to Event Trait
+
+### Implemented
+
+- Event Trait Usage
+
+### Other
+
 - Initial Commit
-- Created .NET Solution
-- Created C# "Runtime" Project
-- Created C# "Editor" Project
-- Created Extension of MonoBehaviour
-- Created Character (2D) Class
-- Created Player (2D) Class
-- Created Event Trait
-- Added Generic Types to Event Trait
-- Implemented Event Trait Usage
-- Created Interface to group Event Traits
 - Documented Code
