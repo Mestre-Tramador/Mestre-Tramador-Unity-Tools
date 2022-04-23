@@ -14,7 +14,7 @@ insert_final_newline = true
 
 # JSON, XML and alike, and other work
 # better with less spacing
-[*.{json,xml,csproj,sln,todo}]
+[*.{json,xml,yml,yaml,csproj,sln,todo}]
 indent_size = 2
 
 # Markdown files have some specific

@@ -32,9 +32,14 @@ Editor:
 Other:
   ✔ Complete Markdown files @done (21/04/2022 00:57)
   ✔ Fix ChangeLog file @done (22/04/2022 00:54)
-  ☐ Create GitHub Issue Template
-  ☐ Create GitHub Issue Labels
-  ☐ Create GitHub PR Template
+  ✔ Create GitHub Issue Templates @done (22/04/2022 21:29)
+  ✔ Create GitHub Issue Labels @done (22/04/2022 21:02)
+  ✔ Create Markdown Lint file @done (22/04/2022 22:10)
+  ✔ Lint Markdown Files @done (22/04/2022 22:37)
+  ✔ Add more info on Readme Files @done (22/04/2022 22:45)
+  ✔ Add more info on Security Policy Files @done (22/04/2022 22:55)
+  ✔ Create Contribution Guidelines @done (22/04/2022 23:51:31)
   ☐ Create a GitHub Wiki
+  ☐ Create GitHub PR Template
   ☐ Study the conversion to a Unity Package
 ...

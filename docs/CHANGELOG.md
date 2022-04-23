@@ -12,6 +12,23 @@ Also, this projects follows the [Microsoft Assembly Versioning](https://docs.mic
 - Player 2D Animations controls;
 - For more info, check the todo list [here](./LIST.todo).
 
+## [0.1.0.2-docs] - 2022-04-22
+
+### Created
+
+- Issue Template forms
+- Contribution Guidelines
+
+### Added
+
+- Markdown Lint file
+- Security Policy About Personal or Sensitive Data
+
+### Improved
+
+- Readme text
+- Security Policy Legibility
+
 ## [0.1.0.2] - 2022-04-22
 
 ### Created
