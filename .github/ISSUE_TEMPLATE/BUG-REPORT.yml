@@ -3,7 +3,7 @@
 ##################################
 
 name: Bug Report
-description: Report a Bug occurring on one or more functions of the class library.
+description: Report a Bug occurring on one or more functions of the package.
 title: "[BUG]: "
 labels: ["Type: Bug Report", "Status: Opened"]
 assignees:
@@ -52,23 +52,16 @@ body:
     id: unity_version
     attributes:
       label: Unity Version
-      description: Version of Unity which the class lib was used.
+      description: Version of Unity which the package was used.
     validations:
       required: true
   - type: input
-    id: runtime_version
+    id: package_version
     attributes:
-      label: Runtime Version
-      description: Version of the Runtime Main DLL used.
+      label: Package Version
+      description: Version of the Package used.
     validations:
       required: true
-  - type: input
-    id: editor_version
-    attributes:
-      label: Editor Version
-      description: Version of the Editor Main DLL used (black if not used).
-    validations:
-      required: false
   - type: markdown
     attributes:
       value: ---

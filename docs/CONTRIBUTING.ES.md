@@ -21,7 +21,7 @@ continuación las formas en que puede contribuir:
 ## Pruebas
 
 La prueba es una de las mejores formas de contribuir, porque se muestra en varios
-casos y entornos la funcionalidad real de la Biblioteca de Clases. Por favor,
+casos y entornos la funcionalidad real del Paquete. Por favor,
 no tenga miedo de instalar y probar el proyecto, seguro que me alegrará verlo!
 
 ### Informes de Errores
@@ -34,7 +34,7 @@ y llene todos los campos con exactamente sus hallazgos.
 
 ### Solicitudes de Funciones
 
-Si hay una función que desea ver en la Biblioteca de Clases que también resolverá
+Si hay una función que desea ver en el Paquete que también resolverá
 un problema para más DEVs, considere solicitarlo con una issue. Selecciona el
 plantilla *[Feature Request](../.github/ISSUE_TEMPLATE/FEATURE-REQUEST.yml)* y
 llena los campos con los motivos.

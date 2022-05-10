@@ -4,7 +4,7 @@
 
 ## About Personal or Sensitive Data
 
-This Class Lib does not retrieve any personal or sensitive data from the users
+This Package does not retrieve any personal or sensitive data from the users
 or Unity Projects which it is implement and so must stay. Also it does not connect
 to any database nor make any HTTP requests.
 

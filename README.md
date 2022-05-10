@@ -14,24 +14,16 @@
 ---
 
 [![unity](./docs/assets/badges/unity.svg)](#)
-[![dotnet](./docs/assets/badges/dotnet.svg)](#)
 
-Mestre Tramador Unity Tools is a .NET Class Lib to help Unity Developers,
+Mestre Tramador Unity Tools is a Package to help Unity Developers,
 Game Designers or Students to create amazing games!
 
 ## Installation
 
 Currently this is a **work in progress** and no releases were made.
 
-If you want to use the class lib anyway, you can or copy all `.cs` files to your
-Unity Project or clone the repository and run the following commands:
-
-```sh
-cd src
-dotnet build
-```
-
-The generated DLL files will be on the `dist/` folder.
+If you want to use the package anyway, you can or copy all `.cs` files to your
+Unity Project or easily install via UPM, either locally cloning or via GitHub URL.
 
 ## Contribution
 

@@ -20,7 +20,7 @@ Considerando que você leu todos os arquivos acima, confira abaixo as formas de 
 ## Testando
 
 Testar é uma das melhores formas de contribuir, porque mostra em vários casos e ambientes
-a funcionalidade real da Biblioteca de Classes. Por favor, não tenha medo de instalar
+a funcionalidade real do Pacote. Por favor, não tenha medo de instalar
 e testar o projeto, com certeza ficarei feliz em ver isso!
 
 ### Relato de Bugs
@@ -33,7 +33,7 @@ e preencha todos os campos com exatamente suas descobertas.
 
 ### Pedido de Funcionalidades
 
-Se há uma funcionalidade que você deseja ver na Biblioteca de Classes que também
+Se há uma funcionalidade que você deseja ver no Pacote que também
 possa resolver um problema para mais DEVs, considere solicitá-la com uma issue.
 Coloque o template para uma *[Feature Request](../.github/ISSUE_TEMPLATE/FEATURE-REQUEST.yml)*
 e preencha os campos com os motivos.

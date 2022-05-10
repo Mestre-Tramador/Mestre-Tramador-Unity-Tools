@@ -4,7 +4,7 @@
 
 ## Sobre Dados Pessoais ou Sensíveis
 
-Esta Biblioteca de Classes não recolhe nenhum dado pessoal ou sensível dos usuários
+Este Pacote não recolhe nenhum dado pessoal ou sensível dos usuários
 ou Projetos Unity que está implementada e assim deve permanecer. Também não integra-se
 em qualquer banco de dados nem faz chamadas HTTP.
 

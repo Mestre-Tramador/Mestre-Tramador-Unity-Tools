@@ -3,7 +3,7 @@
 #######################################
 
 name: Feature Request
-description: A Feature shall be implemented on the class lib.
+description: A Feature shall be implemented on the package.
 title: "[FEAT]: "
 labels: ["Type: Feature Request", "Status: Opened"]
 assignees:

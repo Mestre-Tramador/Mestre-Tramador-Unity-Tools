@@ -1,5 +1,5 @@
 #region License
-// This is a ClassLib to help Unity Developers, Game Designers or Students.
+// This is a Package to help Unity Developers, Game Designers or Students.
 // Copyright (C) 2022  Mestre-Tramador
 //
 // This program is free software: you can redistribute it and/or modify

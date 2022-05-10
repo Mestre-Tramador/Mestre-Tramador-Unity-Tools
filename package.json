@@ -1,0 +1,24 @@
+{
+  "name": "io.github.mestretramador.tools",
+  "version": "0.0.1",
+  "description": "Mestre Tramador Unity Tools is a Package to help Unity Developers, Game Designers or Students to create amazing games!",
+  "displayName": "Mestre Tramador Unity Tools",
+  "unity": "2021.2",
+  "hideInEditor": false,
+  "license": "GPL-3.0-or-later",
+  "licensesUrl": "https://github.com/Mestre-Tramador/Mestre-Tramador-Unity-Tools/blob/main/LICENSE",
+  "changelogUrl": "https://github.com/Mestre-Tramador/Mestre-Tramador-Unity-Tools/blob/main/docs/CHANGELOG.md",
+  "documentationUrl": "https://github.com/Mestre-Tramador/Mestre-Tramador-Unity-Tools/wiki",
+  "keywords": [
+    "open-source",
+    "csharp",
+    "study",
+    "unity",
+    "unity-package",
+    "mestre-tramador"
+  ],
+  "author": {
+    "name": "Mestre Tramador",
+    "url": "https://github.com/Mestre-Tramador"
+  }
+}

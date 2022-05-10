@@ -9,25 +9,17 @@
 ---
 
 [![unity](./assets/badges/unity.svg)](#)
-[![dotnet](./assets/badges/dotnet.svg)](#)
 
-¡Mestre Tramador Unity Tools es un Biblioteca de Clases .NET para ayudar a los
-Desarrolladores en Unity, Diseñadores de Juegos o Estudiantes a crear juegos increíbles!
+¡Mestre Tramador Unity Tools es un Paquete para ayudar a los Desarrolladores en
+Unity, Diseñadores de Juegos o Estudiantes a crear juegos increíbles!
 
 ## Instalación
 
 Actualmente, este es un **trabajo en progreso** y no se realizaron releases.
 
-Si desea utilizar la biblioteca de clases de todos modos, puede o copiar todos los
-archivos `.cs` para su Proyecto Unity o clonar el repositorio y ejecutar los
-siguientes comandos:
-
-```sh
-cd src
-dotnet build
-```
-
-Los archivos DLL generados estarán en la carpeta `dist/`.
+Si desea utilizar el paquete de todos modos, puede o copiar todos los archivos
+`.cs` para su Proyecto Unity o instálelo fácilmente a través de UPM, ya sea
+clonando localmente o a través de la URL de GitHub.
 
 ## Contribución
 

@@ -20,7 +20,7 @@ Considering you've read all the above files, check below the ways you can contri
 ## Testing
 
 Testing is one of the best ways to contribute, as it show on various cases and environments
-the real functionality of the Class Lib. Please, don't be afraid to install and test
+the real functionality of the Package. Please, don't be afraid to install and test
 the project, I certainty will be glad to see it!
 
 ### Bug Reports
@@ -31,7 +31,7 @@ and fill all the fields with exactly your findings.
 
 ### Feature Requests
 
-If there is a feature you want to see on the Class Lib which shall also resolve
+If there is a feature you want to see on the Package which shall also resolve
 a problem for more DEVs, please consider requesting it with an issue. Set the
 template to *[Feature Request](../.github/ISSUE_TEMPLATE/FEATURE-REQUEST.yml)*
 and fill the fields with the motives.
