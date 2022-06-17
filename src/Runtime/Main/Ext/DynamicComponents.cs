@@ -27,6 +27,17 @@ namespace MestreTramador
     public static class DynamicComponents
     {
         /// <summary>
+        ///     Check if the current object has a child with a specific name.
+        /// </summary>
+        /// <param name="gObj">The instanced Game Object.</param>
+        /// <param name="childName">Any acceptable name.</param>
+        /// <returns>If an Game Object is found, then returns <see langword="true" />.</returns>
+        public static bool HasChild(this GameObject gObj, string childName)
+        {
+            return GameObject.Find($"{gObj.name}/{childName}");
+        }
+
+        /// <summary>
         ///     Check if the current object has attached a specific <see cref="Component" />.
         /// </summary>
         /// <param name="gObj">The instanced Game Object.</param>
@@ -36,7 +47,7 @@ namespace MestreTramador
         /// </returns>
         public static bool HasComponent<C>(this GameObject gObj) where C : Component
         {
-            return gObj.GetComponent<C>() != null;
+            return gObj.GetComponent<C>();
         }
 
         /// <summary>

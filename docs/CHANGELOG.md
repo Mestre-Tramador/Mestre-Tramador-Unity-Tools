@@ -10,6 +10,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Player 2D Animations controls;
 - For more info, check the todo list [here](./LIST.todo).
 
+## [0.0.2] - 2022-06-16
+
+### Created
+
+- Shooting Event Traits
+- Shooter 2D Characters
+- Shooter 2D Editor
+
+### Added
+
+- Unity Assembly Definitions
+- Bullet prefab
+
+### Changed
+
+- Folder structure of the project
+
+### Improved
+
+- Extension methods
+- Some doc comments
+
 ## [0.0.1] - 2022-05-09
 
 ### Converted

@@ -27,8 +27,8 @@ namespace MestreTramador.Editor
     ///     enabling customization of some controls and view of
     ///     current stats.
     /// </summary>
-    [CustomEditor(typeof(Player2D))]
-    sealed class Player2DEditor : SerialEditor
+    [CustomEditor(typeof(Player2D), true)]
+    public class Player2DEditor : SerialEditor
     {
         #region Properties
         #pragma warning disable CS8618
@@ -154,8 +154,9 @@ namespace MestreTramador.Editor
                 GUILayout.EndVertical();
 
                 GUILayout.BeginHorizontal();
-                    Player.CanMove = EditorGUILayout.Toggle("Move", Player.CanMove);
-                    Player.CanJump = EditorGUILayout.Toggle("Jump", Player.CanJump);
+                    Player.CanMove = EditorGUILayout.ToggleLeft("Move", Player.CanMove, GUILayout.Width(55.0f));
+                    Player.CanJump = EditorGUILayout.ToggleLeft("Jump", Player.CanJump, GUILayout.Width(55.0f));
+                    AdditionalControls();
                 GUILayout.EndHorizontal();
                 #endregion
 
@@ -180,6 +181,8 @@ namespace MestreTramador.Editor
                     GUILayout.Label("Force:");
                     Player.Force = EditorGUILayout.Slider(Player.Force, 0.0f, HasBody2D.MAX_FORCE);
                 GUILayout.EndHorizontal();
+
+                AdditionalStats();
                 #endregion
             EditorGUI.EndDisabledGroup();
             #endregion
@@ -240,6 +243,18 @@ namespace MestreTramador.Editor
             }
             #endregion
         }
+        #endregion
+
+        #region Virtuals
+        /// <summary>
+        ///     Create additional Controls on the Editor.
+        /// </summary>
+        protected virtual void AdditionalControls() { }
+
+        /// <summary>
+        ///     Create additional Stats on the Editor.
+        /// </summary>
+        protected virtual void AdditionalStats() { }
         #endregion
     }
 }

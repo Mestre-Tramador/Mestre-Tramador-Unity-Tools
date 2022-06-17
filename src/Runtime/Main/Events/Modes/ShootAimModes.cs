@@ -19,24 +19,26 @@
 namespace MestreTramador
 {
     /// <summary>
-    ///     All Characters have controls that determine the Events they shall use.
+    ///     All modes (ways) of aiming a Shooter Character can use.
     /// </summary>
-    public interface CharacterControls
+    public enum ShootAimModes
     {
-        /// <summary>
-        ///     Determines if the Character can execute a <see cref="MoveEvent" />.
-        /// </summary>
-        /// <value>
-        ///     Internally, <see langword="true" /> indicates that the Character can move.
-        /// </value>
-        bool CanMove { get; }
+        /// <summary>It cannot aim.</summary>
+        NoAim = 0,
 
-        /// <summary>
-        ///     Determines if the Character can execute a <see cref="JumpEvent" />.
-        /// </summary>
-        /// <value>
-        ///     Internally, <see langword="true" /> indicates that the Character can jump.
-        /// </value>
-        bool CanJump { get; }
+        /// <summary>It aims in a single click.</summary>
+        SingleClickAim = 1,
+
+        /// <summary>It aims while clicking.</summary>
+        HoldClickAim = 2,
+
+        /// <summary>It aims with directional controls.</summary>
+        SmoothAim = 3,
+
+        /// <summary>The aim is the POV of the Shooter Character.</summary>
+        POVAim = 4,
+
+        /// <summary>The aim is the Cursor.</summary>
+        MouseAim = 5
     }
 }

@@ -44,6 +44,15 @@ namespace MestreTramador
                 z == null ? vector.x : (float) z
             );
         }
+
+        /// <inheritdoc cref="TangibleVectors.Tange(Vector3, object?, object?, object?)" />
+        public static Vector2 Tange(this Vector2 vector, object? x = null, object? y = null)
+        {
+            return new Vector2(
+                x == null ? vector.x : (float) x,
+                y == null ? vector.y : (float) y
+            );
+        }
         #nullable disable
 
         /// <summary>
@@ -52,6 +61,12 @@ namespace MestreTramador
         /// <param name="vector">The current <c>Vector</c>.</param>
         /// <returns>The same <c>Vector</c>, but with its X inverted.</returns>
         public static Vector3 InvertX(this Vector3 vector)
+        {
+            return vector.Tange(x: vector.x * -1.0f);
+        }
+
+        /// <inheritdoc cref="TangibleVectors.InvertX(Vector3)" />
+        public static Vector2 InvertX(this Vector2 vector)
         {
             return vector.Tange(x: vector.x * -1.0f);
         }

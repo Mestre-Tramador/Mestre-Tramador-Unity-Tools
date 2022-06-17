@@ -43,7 +43,7 @@ namespace MestreTramador
 
             float x = axis * player.Speed * Time.deltaTime;
 
-            Directions2D dir = player.IsTurnedTo;
+            Directions2D dir = player.IsTurnedTo;            
 
             if((x > 0.0f && dir == Directions2D.Left) || (x < 0.0f && dir == Directions2D.Right))
             {

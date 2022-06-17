@@ -16,22 +16,20 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #endregion
 
-using UnityEngine;
-
-namespace MestreTramador.Editor
+namespace MestreTramador
 {
     /// <summary>
-    ///     Create some <see cref="GUILayout" /> calls as Tags.
+    ///     All modes (ways) of shoots a Shooter Character can use.
     /// </summary>
-    public static class GUILayoutTags
+    public enum ShootModes
     {
-        /// <summary>
-        ///     Referencing a <see langword="&lt;br /&gt;" /> tag,
-        ///     it creates a space of <see langword="15px" />.
-        /// </summary>
-        public static void Break()
-        {
-            GUILayout.Space(15.0f);
-        }
+        /// <summary>It cannot shoots.</summary>
+        NoShoot = 0,
+
+        /// <summary>It shoots in a single click.</summary>
+        SingleClickShoot = 1,
+
+        /// <summary>It shoots while clicking.</summary>
+        HoldClickShoot = 2
     }
 }

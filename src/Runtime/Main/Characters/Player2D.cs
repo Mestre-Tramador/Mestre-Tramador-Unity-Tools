@@ -23,7 +23,7 @@ namespace MestreTramador
     /// <summary>
     ///     A 2D Player is a special type of 2D Character that is controlled by the User.
     /// </summary>
-    sealed public class Player2D : Character2D, Player2DEvents
+    public class Player2D : Character2D, Player2DEvents
     {
         /// <summary>
         ///     The Events Caller.

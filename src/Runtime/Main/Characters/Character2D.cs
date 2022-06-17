@@ -31,6 +31,9 @@ namespace MestreTramador
 
         /// <inheritdoc />
         public bool CanJump { get; set; }
+
+        /// <inheritdoc />
+        public bool CanShoot { get; set; }
         #endregion
 
         #region Body
@@ -135,6 +138,7 @@ namespace MestreTramador
 
             CanMove = true;
             CanJump = true;
+            CanShoot = false;
 
             Force = 0.0f;
             Speed = 0.0f;

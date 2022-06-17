@@ -43,6 +43,9 @@
 *.cs                 text diff=csharp
 *.shader             text
 
+*.asmdef             text linguist-language=JSON
+*.asmref             text linguist-language=JSON
+
 *.mat                merge=unityyamlmerge eol=lf
 *.anim               merge=unityyamlmerge eol=lf
 *.unity              merge=unityyamlmerge eol=lf

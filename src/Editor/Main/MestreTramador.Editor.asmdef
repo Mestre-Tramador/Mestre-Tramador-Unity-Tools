@@ -1,7 +1,7 @@
 {
-    "name": "MestreTramador.Editor.Main",
+    "name": "MestreTramador.Editor",
     "references": [
-        "MestreTramador.Main"
+        "MestreTramador"
     ],
     "includePlatforms": [
         "Editor"

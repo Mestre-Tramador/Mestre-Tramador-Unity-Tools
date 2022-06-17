@@ -16,22 +16,29 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #endregion
 
-using UnityEngine;
-
-namespace MestreTramador.Editor
+namespace MestreTramador
 {
     /// <summary>
-    ///     Create some <see cref="GUILayout" /> calls as Tags.
+    ///     All Characters have controls that determine the Events they shall use.
     /// </summary>
-    public static class GUILayoutTags
+    public interface CharacterControls
     {
         /// <summary>
-        ///     Referencing a <see langword="&lt;br /&gt;" /> tag,
-        ///     it creates a space of <see langword="15px" />.
+        ///     Determines if the Character can execute a <see cref="MoveEvent" />.
         /// </summary>
-        public static void Break()
-        {
-            GUILayout.Space(15.0f);
-        }
+        /// <value>
+        ///     Internally, <see langword="true" /> indicates that the Character can move.
+        /// </value>
+        bool CanMove { get; }
+
+        /// <summary>
+        ///     Determines if the Character can execute a <see cref="JumpEvent" />.
+        /// </summary>
+        /// <value>
+        ///     Internally, <see langword="true" /> indicates that the Character can jump.
+        /// </value>
+        bool CanJump { get; }
+
+        bool CanShoot { get ;}
     }
 }
