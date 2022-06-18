@@ -36,9 +36,9 @@ namespace MestreTramador
             {
                 return;
             }
-        
-            // TODO: Handle Aim Mode.            
-            
+
+            // TODO: Handle Aim Mode.
+
             switch(gunslinger.AimMode)
             {
                 case ShootAimModes.HoldClickAim:
@@ -52,6 +52,6 @@ namespace MestreTramador
                     gunslinger.HideCrosshair();
                 break;
             }
-        }        
+        }
     }
 }

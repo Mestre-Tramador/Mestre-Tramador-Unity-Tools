@@ -33,7 +33,7 @@ namespace MestreTramador
         /// <param name="gunslinger">The instance of the Gunslinger.</param>
         private void OnShootGunslinger2D(Gunslinger2D gunslinger)
         {
-            if(!gunslinger.CanShoot || gunslinger.ShootMode == ShootModes.NoShoot)            
+            if(!gunslinger.CanShoot || gunslinger.ShootMode == ShootModes.NoShoot)
             {
                 return;
             }
@@ -45,7 +45,7 @@ namespace MestreTramador
                 if(Input.GetMouseButtonDown(0))
                 {
                     gunslinger.Ammo--;
-                    
+
                     GameObject bullet = GameObject.Instantiate(
                         gunslinger.Shot,
                         gunslinger.transform.position,

@@ -37,7 +37,7 @@ namespace MestreTramador
             if(behaviour is ShooterCharacter2D)
             {
                 if(behaviour is Gunslinger2D)
-                {                   
+                {
                     this.OnAimGunslinger2D(behaviour as Gunslinger2D);
 
                     return;

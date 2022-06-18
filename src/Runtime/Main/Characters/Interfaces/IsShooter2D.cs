@@ -50,7 +50,7 @@ namespace MestreTramador
         /// </value>
         ShootAimModes AimMode { get; }
         #endregion
-        
+
         #region Config
         /// <summary>
         ///     Configure if the Shooter as a limit of <see cref="Ammo" />.
@@ -63,14 +63,14 @@ namespace MestreTramador
         #endregion
 
         #region Extras
-        #nullable enable     
+        #nullable enable
         /// <summary>
         ///     Act as the current ammo.
         /// </summary>
         /// <value>
         ///     It is <see langword="nullable" /> in cases that
-        ///     the Shooter does not have a ammunition limit. 
-        /// </value>   
+        ///     the Shooter does not have a ammunition limit.
+        /// </value>
         int? Ammo { get; }
 
         /// <summary>
@@ -78,11 +78,11 @@ namespace MestreTramador
         /// </summary>
         /// <value>
         ///     It is <see langword="nullable" /> in cases that
-        ///     the Shooter does not have a ammunition limit. 
-        /// </value>   
+        ///     the Shooter does not have a ammunition limit.
+        /// </value>
         int? MaxAmmo { get; }
 
-        /// <summary>        
+        /// <summary>
         ///     Is the current strength using to make a shot.
         ///     <br />
         ///     Generally is used on the
@@ -102,8 +102,8 @@ namespace MestreTramador
         ///     scene Game Object, but also <see langword="null" />
         ///     if the <see cref="AimMode" /> prevents having a crosshair.
         /// </value>
-        GameObject? Crosshair { get; }               
-        #nullable disable        
+        GameObject? Crosshair { get; }
+        #nullable disable
         #endregion
     }
 }

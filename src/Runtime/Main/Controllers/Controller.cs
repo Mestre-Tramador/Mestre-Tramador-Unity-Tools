@@ -35,7 +35,7 @@ namespace MestreTramador
         ///     and may have various components.
         /// </value>
         protected GameObject Player { get; private set; }
-        
+
         /// <summary>
         ///     It defines the actions of the Controller.
         /// </summary>
@@ -44,7 +44,7 @@ namespace MestreTramador
         ///     used on a child class.
         /// </value>
         protected int Mode { get; set; }
-        
+
         /// <summary>
         ///     A conversion of the Mode th the Enumeration index.
         /// </summary>

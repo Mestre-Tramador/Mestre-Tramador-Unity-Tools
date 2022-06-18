@@ -24,13 +24,13 @@ namespace MestreTramador
     ///     A Controller to act alongside Unity's <see cref="Camera" />.
     /// </summary>
     public class CameraController : Controller
-    {               
+    {
         /// <summary>
         ///     An offset from the player's current position.
         /// </summary>
         /// <value>It defined only once.</value>
         private Vector3 Offset { get; set; }
-       
+
         /// <inheritdoc />
         public override CameraControllerModes ModeValue<CameraControllerModes>()
         {
@@ -55,7 +55,7 @@ namespace MestreTramador
         ///     the camera according to the mode.
         /// </summary>
         protected override void OnUpdate()
-        {            
+        {
             switch(ModeValue<CameraControllerModes>())
             {
                 case CameraControllerModes.Static:

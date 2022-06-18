@@ -33,11 +33,11 @@ namespace MestreTramador
         /// </summary>
         protected override void OnStart()
         {
-            Vector2 vector = transform.right;            
+            Vector2 vector = transform.right;
 
             if(ShooterCharacter.IsTurnedTo == Directions2D.Left)
-            {                
-                vector = vector.InvertX();                
+            {
+                vector = vector.InvertX();
             }
 
             Body.velocity = vector * 20.0f;
@@ -54,7 +54,7 @@ namespace MestreTramador
                 Destroy(gameObject);
             }
         }
-      
+
         /// <summary>
         ///     On Reset, nothing occurs.
         /// </summary>

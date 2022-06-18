@@ -19,7 +19,7 @@
 using UnityEngine;
 
 namespace MestreTramador
-{    
+{
     /// <summary>
     ///     Extends and fixes the use of the Unity's <see cref="Color" />.
     /// </summary>

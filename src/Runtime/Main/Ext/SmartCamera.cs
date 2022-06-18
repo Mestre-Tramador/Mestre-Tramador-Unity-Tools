@@ -19,7 +19,7 @@
 using UnityEngine;
 
 namespace MestreTramador
-{    
+{
     /// <summary>
     ///     Extend the use of the <see cref="Camera" />
     ///     class into smart functions.

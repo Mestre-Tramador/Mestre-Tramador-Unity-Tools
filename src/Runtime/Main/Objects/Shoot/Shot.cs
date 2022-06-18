@@ -41,7 +41,7 @@ namespace MestreTramador
                     #if UNITY_EDITOR
                         Debug.LogWarning("The Character whose shot is already set!");
                     #endif
-                    
+
                     return;
                 }
 

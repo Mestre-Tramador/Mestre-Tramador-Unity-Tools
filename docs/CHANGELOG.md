@@ -10,7 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Player 2D Animations controls;
 - For more info, check the todo list [here](./LIST.todo).
 
-## [0.0.4] - 2022-06-17
+## [0.0.4-lines] - 2022-06-18
+
+### Fixed
+
+- Missing blank final lines
+- Trailing space
+- Changelog incorrect date
+
+## [0.0.4] - 2022-06-18
 
 ### Created
 

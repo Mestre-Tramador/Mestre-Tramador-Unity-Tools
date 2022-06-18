@@ -38,7 +38,7 @@ namespace MestreTramador
         /// <inheritdoc />
         public bool HasAmmoLimit { get; protected set; }
 
-        #nullable enable    
+        #nullable enable
         /// <inheritdoc />
         public int? Ammo { get; set; }
 
@@ -51,7 +51,7 @@ namespace MestreTramador
         /// <inheritdoc />
         public GameObject? Crosshair { get; protected set; }
         #nullable disable
-    
+
         /// <summary>
         ///     The shooter point where all shots are fired.
         /// </summary>
@@ -124,7 +124,7 @@ namespace MestreTramador
 
             OnShoot();
             OnAim();
-        }        
+        }
 
         /// <summary>
         ///     Alongside all base resetations, a <see cref="Shooter" />
@@ -141,8 +141,8 @@ namespace MestreTramador
                 #if UNITY_EDITOR
                     Debug.LogWarning($"Created shooter point for the {gameObject.name}!");
                 #endif
-            }            
-        }        
+            }
+        }
         #endregion
 
         #region Creation

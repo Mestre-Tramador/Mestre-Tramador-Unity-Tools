@@ -61,7 +61,7 @@ namespace MestreTramador.Editor
         ///             <item>
         ///                <term><see cref="Character2D.CanShoot" /></term>
         ///                <description>Enable/Disable the Shooting.</description>
-        ///             </item>        
+        ///             </item>
         ///         </list>
         /// </summary>
         protected override void AdditionalControls()
@@ -77,25 +77,25 @@ namespace MestreTramador.Editor
         ///             <item>
         ///                <term><see cref="ShooterCharacter2D.MaxAmmo" /></term>
         ///                <description>The maximum ammunition of the Gunslinger Player.</description>
-        ///             </item>       
-        /// 
+        ///             </item>
+        ///
         ///             <item>
         ///                <term><see cref="ShooterCharacter2D.Ammo" /></term>
         ///                <description>The current ammunition of the Gunslinger Player.</description>
-        ///             </item>   
+        ///             </item>
         ///         </list>
         /// </summary>
         protected override void AdditionalStats()
-        {          
+        {
             int gunslingerMaxAmmo = Gunslinger.MaxAmmo ?? Gunslinger2D.MAX_AMMO;
-            int gunslingerAmmo = Gunslinger.Ammo ?? 0;      
+            int gunslingerAmmo = Gunslinger.Ammo ?? 0;
 
             GUILayout.BeginHorizontal();
                 GUILayout.Label("Max. Ammo:");
                 Gunslinger.MaxAmmo = EditorGUILayout.IntField(gunslingerMaxAmmo);
             GUILayout.EndHorizontal();
 
-            GUILayout.BeginHorizontal();                            
+            GUILayout.BeginHorizontal();
                 GUILayout.Label("Ammo:");
                 int ammo = EditorGUILayout.IntField(gunslingerAmmo);
 
@@ -107,5 +107,5 @@ namespace MestreTramador.Editor
             GUILayout.EndHorizontal();
         }
         #endregion
-    }    
+    }
 }
