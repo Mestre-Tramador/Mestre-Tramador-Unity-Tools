@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Player 2D Animations controls;
 - For more info, check the todo list [here](./LIST.todo).
 
+## [0.0.4] - 2022-06-17
+
+### Created
+
+- Controller base class
+- Camera Controller
+- Camera Controller Editor
+
 ## [0.0.3] - 2022-06-17
 
 ### Created

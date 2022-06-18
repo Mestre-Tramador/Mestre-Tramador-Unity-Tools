@@ -18,7 +18,8 @@ Runtime:
     ✔ Create Shooting Event Traits @done (14/06/2022 22:56)
     ✔ Create Shooter Player classes @done (15/06/2022 19:41)
     ✔ Create Aiming Event Traits @done (17/06/2022 21:50)
-    ☐ Create Camera Controller class
+    ✔ Create Controller Base class @done (18/06/2022 15:12)
+    ✔ Create Camera Controller class @done (18/06/2022 15:26)
     ☐ Implement more Shooting Events
   ...
 ...
@@ -32,6 +33,7 @@ Editor:
     ✔ Document current Code @done (22/04/2022 11:13)
     ✘ Add Animations on Player (2D) Editor @cancelled (16/05/2022 21:07:02)
     ✔ Add Shooting Settings on Editor @done (15/06/2022 23:28)
+    ✔ Add Camera Controller Editor @done (18/06/2022 15:58)
     ☐ Add more Shooting Settings on Editor
   ...
 ...
