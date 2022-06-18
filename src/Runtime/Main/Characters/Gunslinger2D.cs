@@ -31,11 +31,37 @@ namespace MestreTramador
         public const int MAX_AMMO = 6;
 
         /// <summary>
-        ///     Solely the event is fired.
+        ///     Set the <see cref="ShooterCharacter2D.Crosshair" /> as invisible.
+        /// </summary>
+        /// <seealso cref="SetCrosshair(bool)" />
+        public void HideCrosshair()
+        {
+            SetCrosshair(false);
+        }
+
+        /// <summary>
+        ///     Set the <see cref="ShooterCharacter2D.Crosshair" /> as visible.
+        /// </summary>
+        /// <seealso cref="SetCrosshair(bool)" />
+        public void ShowCrosshair()
+        {
+            SetCrosshair(true);
+        }
+
+        /// <summary>
+        ///     Solely the aim event is fired.
+        /// </summary>
+        protected override void OnAim()
+        {
+            Ea.Use<AimEvent>(this);
+        }
+
+        /// <summary>
+        ///     Solely the shoot event is fired.
         /// </summary>
         protected override void OnShoot()
         {
-            E.Use<ShootEvent>(this);
+            Es.Use<ShootEvent>(this);
         }
 
         /// <inheritdoc />
@@ -54,6 +80,14 @@ namespace MestreTramador
         ///            <term><see cref="ShooterCharacter2D.HasAmmoLimit" /></term>
         ///            <description><see langword="true" /></description>
         ///         </item>
+        ///         <item>
+        ///            <term><see cref="ShooterCharacter2D.ShootMode" /></term>
+        ///            <description><see cref="ShootModes.SingleClickShoot" /></description>
+        ///         </item>
+        ///         <item>
+        ///            <term><see cref="ShooterCharacter2D.AimMode" /></term>
+        ///            <description><see cref="ShootAimModes.HoldClickAim" /></description>
+        ///         </item>
         ///     </list>
         /// </remarks>
         protected override void OnAwake()
@@ -64,29 +98,68 @@ namespace MestreTramador
             MaxAmmo = MAX_AMMO;
             HasAmmoLimit = true;
 
+            ShootMode = ShootModes.SingleClickShoot;
+            AimMode = ShootAimModes.HoldClickAim;
+
             Shot = Resources.Load<GameObject>("Packages/io.github.mestretramador.tools/Prefabs/Shots/BulletShot");
+            Crosshair =  GameObject.Find($"{gameObject.name}/Aim");
         }
 
         /// <summary>
-        ///     When reseting, the Shoot and Aim modes are set to:
-        ///     <list type="bullet">
-        ///         <item>
-        ///            <term><see cref="ShooterCharacter2D.ShootMode" /></term>
-        ///            <description><see cref="ShootModes.SingleClickShoot" /></description>
-        ///         </item>
-        ///         <item>
-        ///            <term><see cref="ShooterCharacter2D.AimMode" /></term>
-        ///            <description><see cref="ShootAimModes.HoldClickAim" /></description>
-        ///         </item>
-        ///     </list>
+        ///     Alongside all base resetations, a <see cref="ShooterCharacter2D.Crosshair" />
+        ///     reference is created if none child Game Object was found.
         /// </summary>
         protected override void OnReset()
         {
             base.OnReset();
 
-            ShootMode = ShootModes.SingleClickShoot;
+            if(!gameObject.HasChild("Aim"))
+            {
+                Crosshair = CreateAimCrossHair();
 
-            AimMode = ShootAimModes.HoldClickAim;
+                #if UNITY_EDITOR
+                    Debug.LogWarning($"Created aim crosshair point for the {gameObject.name}!");
+                #endif
+            }
+        }
+
+        /// <summary>
+        ///     If present, the visibility of the crosshair is defined.
+        /// </summary>
+        /// <param name="visibility">A <see langword="true" /> value define as visible.</param>
+        private void SetCrosshair(bool visibility)
+        {
+            SpriteRenderer sprite = Crosshair?.GetComponent<SpriteRenderer>();
+
+            if(sprite)
+            {
+                sprite.color = visibility ? sprite.color.ToOpaque() : sprite.color.ToTransparent();
+            }
+        }
+
+        /// <summary>
+        ///     Create a simple and blank Object to use as
+        ///     a reference for the
+        ///     <see cref="ShooterCharacter2D.Crosshair" />
+        /// </summary>
+        /// <returns>
+        ///     The new instance comes already positioned
+        ///     relatively to the parent Game Object and
+        ///     with a <see cref="SpriteRenderer" />.
+        /// </returns>
+        private GameObject CreateAimCrossHair()
+        {
+            GameObject crosshair = new GameObject("Aim");
+
+            crosshair.transform.parent = transform;
+
+            crosshair.transform.localPosition = new Vector3(4.0f, 0.25f, 0.0f);
+
+            SpriteRenderer sprite = crosshair.AddComponent<SpriteRenderer>();
+
+            sprite.color = sprite.color.ToTransparent();
+
+            return crosshair;
         }
     }
 }

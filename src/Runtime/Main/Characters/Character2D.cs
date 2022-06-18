@@ -34,6 +34,9 @@ namespace MestreTramador
 
         /// <inheritdoc />
         public bool CanShoot { get; set; }
+
+        /// <inheritdoc />
+        public bool CanAim { get; set; }
         #endregion
 
         #region Body
@@ -139,11 +142,13 @@ namespace MestreTramador
             CanMove = true;
             CanJump = true;
             CanShoot = false;
+            CanAim = false;
 
             Force = 0.0f;
             Speed = 0.0f;
 
             Jumps = 0;
+            JumpMode = JumpModes.NoJump;
         }
 
         /// <summary>
@@ -159,8 +164,6 @@ namespace MestreTramador
             Body.hideFlags = HideFlags.HideInInspector;
 
             Collider = gameObject.AddComponentIfNotExist<Character2DCollider>();
-
-            JumpMode = JumpModes.NoJump;
         }
         #endregion
     }

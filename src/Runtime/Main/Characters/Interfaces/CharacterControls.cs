@@ -39,6 +39,20 @@ namespace MestreTramador
         /// </value>
         bool CanJump { get; }
 
-        bool CanShoot { get ;}
+        /// <summary>
+        ///     Determines if the Character can execute a <see cref="ShootEvent" />.
+        /// </summary>
+        /// <value>
+        ///     Internally, <see langword="true" /> indicates that the Character can shoot.
+        /// </value>
+        bool CanShoot { get; }
+
+        /// <summary>
+        ///     Determines if the Character can execute a <see cref="AimEvent" />.
+        /// </summary>
+        /// <value>
+        ///     Internally, <see langword="true" /> indicates that the Character can aim.
+        /// </value>
+        bool CanAim { get; }
     }
 }

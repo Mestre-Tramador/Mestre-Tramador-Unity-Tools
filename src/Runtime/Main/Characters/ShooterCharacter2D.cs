@@ -23,7 +23,7 @@ namespace MestreTramador
     /// <summary>
     ///     All 2D Players who are Shooters are extensions of this base class.
     /// </summary>
-    public abstract class ShooterCharacter2D : Player2D, IsShooter2D, UseEvent<ShootEvent, ShooterCharacter2D>
+    public abstract class ShooterCharacter2D : Player2D, IsShooter2D, UseEvent<ShootEvent, ShooterCharacter2D>, UseEvent<AimEvent, ShooterCharacter2D>
     {
         #region Shooting
         /// <inheritdoc />
@@ -69,10 +69,24 @@ namespace MestreTramador
         /// <value>
         ///     It's a simple casting for the <see langword="interface" />.
         /// </value>
-        protected UseEvent<ShootEvent, ShooterCharacter2D> E { get => this; }
+        protected UseEvent<ShootEvent, ShooterCharacter2D> Es { get => this; }
+
+        /// <summary>
+        ///     The Aim Event Caller.
+        /// </summary>
+        /// <value>
+        ///     It's a simple casting for the <see langword="interface" />.
+        /// </value>
+        protected UseEvent<AimEvent, ShooterCharacter2D> Ea { get => this; }
         #endregion
 
         #region Behaviour
+        /// <summary>
+        ///     What shall occur on the Aim event,
+        ///     ran <see cref="BaseMonoBehaviour.OnUpdate()" />.
+        /// </summary>
+        protected abstract void OnAim();
+
         /// <summary>
         ///     What shall occur on the Shoot event,
         ///     ran <see cref="BaseMonoBehaviour.OnUpdate()" />.
@@ -87,6 +101,10 @@ namespace MestreTramador
         ///            <term><see cref="Character2D.CanShoot" /></term>
         ///            <description><see langword="true" /></description>
         ///         </item>
+        ///         <item>
+        ///            <term><see cref="Character2D.CanAim" /></term>
+        ///            <description><see langword="true" /></description>
+        ///         </item>
         ///     </list>
         /// </summary>
         protected override void OnAwake()
@@ -94,6 +112,7 @@ namespace MestreTramador
             base.OnAwake();
 
             CanShoot = true;
+            CanAim = true;
 
             Shooter = GameObject.Find($"{gameObject.name}/Shooter");
         }
@@ -104,6 +123,7 @@ namespace MestreTramador
             base.OnUpdate();
 
             OnShoot();
+            OnAim();
         }        
 
         /// <summary>
@@ -121,7 +141,7 @@ namespace MestreTramador
                 #if UNITY_EDITOR
                     Debug.LogWarning($"Created shooter point for the {gameObject.name}!");
                 #endif
-            }
+            }            
         }        
         #endregion
 

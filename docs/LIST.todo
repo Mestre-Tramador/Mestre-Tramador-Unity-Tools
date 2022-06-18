@@ -17,7 +17,7 @@ Runtime:
     ✘ Create Animations Events @cancelled (16/05/2022 21:06:59)
     ✔ Create Shooting Event Traits @done (14/06/2022 22:56)
     ✔ Create Shooter Player classes @done (15/06/2022 19:41)
-    ☐ Create Aiming Event Traits
+    ✔ Create Aiming Event Traits @done (17/06/2022 21:50)
     ☐ Create Camera Controller class
     ☐ Implement more Shooting Events
   ...

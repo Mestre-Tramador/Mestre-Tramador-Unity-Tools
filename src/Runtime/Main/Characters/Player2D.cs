@@ -57,6 +57,8 @@ namespace MestreTramador
 
             Force = 300.0f;
             Speed = 5.0f;
+
+            JumpMode = JumpModes.DoubleJump;
         }
 
         /// <summary>
@@ -65,17 +67,6 @@ namespace MestreTramador
         protected override void OnUpdate()
         {
             E.ListenOnUpdate(this);
-        }
-
-        /// <summary>
-        ///     On Reset, all base sets are made and then
-        ///     a new Jump Mode is defined.
-        /// </summary>
-        protected override void OnReset()
-        {
-            base.OnReset();
-
-            JumpMode = JumpModes.DoubleJump;
         }
 
         /// <summary>
