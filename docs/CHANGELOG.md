@@ -2,13 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
 - Player 2D Animations controls;
 - For more info, check the todo list [here](./LIST.todo).
+
+## [0.0.5] - 2024-07-31
+
+### Fixed
+
+- Little errors on Markdown files
 
 ## [0.0.4-lines] - 2022-06-18
 

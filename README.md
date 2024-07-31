@@ -20,8 +20,6 @@ Game Designers or Students to create amazing games!
 
 ## Installation
 
-Currently this is a **work in progress** and no releases were made.
-
 If you want to use the package anyway, you can or copy all `.cs` files to your
 Unity Project or easily install via UPM, either locally cloning or via GitHub URL.
 

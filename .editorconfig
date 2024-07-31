@@ -12,12 +12,6 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-# JSON, XML and alike, and other work
-# better with less spacing
-[*.{json,xml,yml,yaml,csproj,sln,todo}]
+# JSON, YAML and alike work better with less spacing
+[*.{json,yml,yaml,todo}]
 indent_size = 2
-
-# Markdown files have some specific
-# rules for whitespace and newlines
-[*.md]
-trim_trailing_whitespace = false

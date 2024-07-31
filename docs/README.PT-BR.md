@@ -15,8 +15,6 @@ Game Designers ou Estudantes a criar jogos incríveis!
 
 ## Instalação
 
-Atualmente, este é um **trabalho em andamento** e nenhuma release foi feita.
-
 Se você quiser usar o pacote de qualquer maneira, você pode ou copiar todos os
 arquivos `.cs` para seu Projeto Unity ou facilmente instalar via UPM, quer seja
 clonando localmente ou pela URL do GitHub.
